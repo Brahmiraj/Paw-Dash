@@ -5,6 +5,8 @@ import copy from "../../assets/images/Overview2/copy.svg";
 import trophy from "../../assets/images/Overview2/trophy.svg";
 import { PaginationNav1Presentation } from "../../components/Pagination/Pagination";
 import Overview2Card from "../../components/Overview2Card/Overview2Card";
+import Infocard from '../../components/Infocard/Infocard'
+
 
 const Overview2 = () => {
   const dataArray = [

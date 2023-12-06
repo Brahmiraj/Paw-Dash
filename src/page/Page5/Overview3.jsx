@@ -5,6 +5,7 @@ import copy from "../../assets/images/Overview2/copy.svg";
 import trophy from "../../assets/images/Overview2/trophy.svg";
 import { PaginationNav1Presentation } from "../../components/Pagination/Pagination";
 import Overview3table from "../../components/Overview3table/Overview3table";
+import Infocard from '../../components/Infocard/Infocard'
 
 const Overview3 = () => {
   const TABLE_HEAD = ["Latest Checkpoints Signed", "Rewards", "Timestamp"];

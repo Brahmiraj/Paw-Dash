@@ -8,6 +8,8 @@ import column from "../../assets/images/Grid-view/Group.svg";
 import icon from "../../assets/images/Icon-section/icon.png";
 import arrow from "../../assets/images/Icon-section/arrow.svg";
 import { PaginationNav1Presentation } from "../../components/Pagination/Pagination";
+import Infocard from '../../components/Infocard/Infocard'
+
 
 const Overview = () => {
   return (
