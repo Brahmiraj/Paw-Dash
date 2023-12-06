@@ -14,6 +14,16 @@ const Header = () => {
   const handleClick = () => {
     navigate("/AllValidators")
   }
+  const handleClick1 = () => {
+    navigate("/Overview")
+  }
+  const handleClick2 = () => {
+    navigate("/Overview2")
+  }
+  const handleClick3 = () => {
+    navigate("/Overview3")
+  }
+
   return (
     <div>
       <div className="">
@@ -24,7 +34,7 @@ const Header = () => {
           <div className="hidden sm:block">
             <div className="flex gap-8 rounded-full bg-[#064986] p-2 special:p-5 special:gap-20 special:text-4xl">
             {Links.map((link) => (
-                <h1 key={link.name} className="text-white cursor-pointer">
+                <h1 key={link.name} className="text-white cursor-pointer" onClick={handleClick1}>
                   {link.name}
                 </h1>
               ))}
@@ -32,7 +42,7 @@ const Header = () => {
           </div>
           <div className="flex">
             <div className="flex gap-8 special:gap-20">
-              <button className="text-black rounded-full bg-white flex justify-center items-center p-2 gap-5 special:text-4xl special:p-5 special:gap-10 px-5">
+              <button className="text-black rounded-full bg-white flex justify-center items-center p-2 gap-5 special:text-4xl special:p-5 special:gap-10 px-5" onClick={handleClick2}>
                 <img
                   src={switchlogo}
                   alt="switchlogo"
@@ -40,10 +50,10 @@ const Header = () => {
                 />
                 <h1 className="max-lg:hidden visible">Switch to testnet</h1>
               </button>
-              <button className="text-white rounded-full bg-[#030A17] p-2 special:text-4xl special:p-5 px-3">
+              <button className="text-white rounded-full bg-[#030A17] p-2 special:text-4xl special:p-5 px-3" onClick={handleClick3}>
                 Login
               </button>
-              <button className="text-white hidden max-sm:inline">
+              <button className="text-white hidden max-sm:inline " >
                 <img src={hamburgers} alt="" className="special:w-20" />
               </button>
             </div>
