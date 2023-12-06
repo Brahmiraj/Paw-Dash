@@ -1,15 +1,12 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import SearchField from "../../components/Search/SearchField";
-import Dropdown from "../../components/Dropdown/Dropdown";
 import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Card/Card";
-import command from "../../assets/images/Dropdown/Dropdown.png";
 import grid from "../../assets/images/Grid-view/grid4.svg";
 import column from "../../assets/images/Grid-view/Group.svg";
 import icon from "../../assets/images/Icon-section/icon.png";
 import arrow from "../../assets/images/Icon-section/arrow.svg";
-import Infocard from "../../components/infocard/infocard";
 import { PaginationNav1Presentation } from "../../components/Pagination/Pagination";
 
 const Overview = () => {
