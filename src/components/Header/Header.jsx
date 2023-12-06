@@ -5,11 +5,10 @@ import hamburgers from "../../assets/images/header/hamburger.svg";
 
 const Header = () => {
   const Links =[
-    {name:"Overview",link:"/"},
-    {name:"All Validators",link:"/"},
+    {name:"Overview",link:"/Overview"},
+    {name:"All Validators",link:"/AllValidators"},
     {name:"Public Notices",link:"/"},
   ];
-  // let [open,setOpen]=useState(false);
   return (
     <div>
       <div className="">
@@ -20,7 +19,7 @@ const Header = () => {
           <div className="hidden sm:block">
             <div className="flex gap-8 rounded-full bg-[#064986] p-2 special:p-5 special:gap-20 special:text-4xl">
             {Links.map((link) => (
-                <h1 key={link.name} className="text-white">
+                <h1 key={link.name} className="text-white cursor-pointer">
                   {link.name}
                 </h1>
               ))}
