@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-          <Route path="/PublicNotice" element={<PublicNotice />} />
+          <Route path="/" element={<PublicNotice />} />
           <Route path="/AllValidators" element={<AllValidators />} />
           <Route path="/Overview" element={<Overview />} />
           <Route path="/Overview2" element={<Overview2 />} />

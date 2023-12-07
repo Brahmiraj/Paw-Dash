@@ -11,7 +11,7 @@ const Header = () => {
   const Links = [
     { name: "Overview", navigate: "/Overview" },
     { name: "All Validators", navigate: "/AllValidators" },
-    { name: "Public Notices", navigate: "/PublicNotice" },
+    { name: "Public Notices", navigate: "/" },
   ];
 
   const handleLinkClick = (path, index) => {
