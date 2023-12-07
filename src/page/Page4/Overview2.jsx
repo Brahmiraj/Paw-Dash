@@ -8,11 +8,12 @@ import Overview2Card from "../../components/Overview2Card/Overview2Card";
 import Infocard from "../../components/Infocard/Infocard";
 import Overview3table from "../../components/Overview3table/Overview3table";
 import { useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
 const Overview2 = () => {
   const navigate = useNavigate();
   const handleBecomeDelegateClick = () => {
-    navigate('/Overview');
+    navigate("/Overview");
   };
   const [checkpoint, setCheckpoint] = useState(false);
   const handleClickDelegators = () => {
@@ -28,6 +29,9 @@ const Overview2 = () => {
     input.select();
     document.execCommand("copy");
     document.body.removeChild(input);
+    toast.success("Copied!", {
+      icon: "👌",
+    });
   };
   const dataArray = [
     {
@@ -112,6 +116,7 @@ const Overview2 = () => {
   ];
   return (
     <div>
+      <Toaster position="top-left" reverseOrder={false} />
       <Header />
       <div className="flex flex-col gap-5 px-40 py-10 max-lg:px-5 lg:px-20 special:text-3xl pt-24">
         <div className="grid grid-cols-4 max-sm:grid-cols-2 justify-between gap-3 max-xl:text-xs">
@@ -283,7 +288,10 @@ const Overview2 = () => {
             </button>
           </div>
           <div className="flex max-sm:gap-1 gap-5">
-            <button className="bg-[#064986] rounded-lg text-sm text-white px-3 py-2 special:text-2xl md:whitespace-nowrap transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300" onClick={handleBecomeDelegateClick}>
+            <button
+              className="bg-[#064986] rounded-lg text-sm text-white px-3 py-2 special:text-2xl md:whitespace-nowrap transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300"
+              onClick={handleBecomeDelegateClick}
+            >
               Become a Delegator
             </button>
           </div>

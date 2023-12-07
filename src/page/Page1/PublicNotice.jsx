@@ -7,8 +7,6 @@ import DropdownImg from "../../assets/images/Dropdown/Dropdown.png";
 import { PaginationNav1Presentation } from "../../components/Pagination/Pagination";
 import PublicTable from "../../components/Table/PublicTable";
 
-
-
 const TABLE_HEAD = ["#ID", "Title", "Validator title", "Notice Time"];
  
 const TABLE_ROWS = [
@@ -121,7 +119,7 @@ const PublicNotice = () => {
   return (
     <div className="flex flex-col min-h-screen">
     <Header />
-    <div className="flex-grow px-40 py-10 max-lg:px-5 lg:px-20 pt-24">
+        <div className="flex-grow px-40 py-10 max-lg:px-5 lg:px-20 pt-24">
       <div className="flex justify-between">
         <SearchField />
         <Dropdown DropdownText={"All Notices"} DropdownImg={DropdownImg} />
