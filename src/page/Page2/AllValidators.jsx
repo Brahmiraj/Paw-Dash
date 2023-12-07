@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import SearchField from "../../components/Search/SearchField";
 import Dropdown from "../../components/Dropdown/Dropdown";
@@ -11,134 +11,21 @@ import icon from "../../assets/images/Icon-section/icon.png";
 import arrow from '../../assets/images/Icon-section/arrow.svg'
 import { PaginationNav1Presentation } from "../../components/Pagination/Pagination";
 import { useNavigate } from "react-router-dom";
+import OverviewTable from "../../components/OverviewTable/OverviewTable";
+import {CardTABLE_HEAD, CardData} from '../../components/Details/Details'
 
 const AllValidators = () => {
   const navigate = useNavigate();
   const handleDelegateClick = () => {
-    navigate('/Overview');
+    navigate('/Overview2');
   };
-  const cardData = [
-    {
-      contant1: "Blockchain",
-      contant2: "900.348.15 PAW Staked",
-      contant3: "Commission",
-      contant4: "10%",
-      contant5: "Checkpoints Signed",
-      contant6: "100%",
-      contant7: "Health Status",
-      contant8: "Healthy",
-    },
-    {
-      contant1: "Blockchain",
-      contant2: "900.348.15 PAW Staked",
-      contant3: "Commission",
-      contant4: "10%",
-      contant5: "Checkpoints Signed",
-      contant6: "100%",
-      contant7: "Health Status",
-      contant8: "Healthy",
-    },
-    {
-      contant1: "Blockchain",
-      contant2: "900.348.15 PAW Staked",
-      contant3: "Commission",
-      contant4: "10%",
-      contant5: "Checkpoints Signed",
-      contant6: "100%",
-      contant7: "Health Status",
-      contant8: "Healthy",
-    },
-    {
-      contant1: "Blockchain",
-      contant2: "900.348.15 PAW Staked",
-      contant3: "Commission",
-      contant4: "10%",
-      contant5: "Checkpoints Signed",
-      contant6: "100%",
-      contant7: "Health Status",
-      contant8: "Healthy",
-    },
-    {
-      contant1: "Blockchain",
-      contant2: "900.348.15 PAW Staked",
-      contant3: "Commission",
-      contant4: "10%",
-      contant5: "Checkpoints Signed",
-      contant6: "100%",
-      contant7: "Health Status",
-      contant8: "Healthy",
-    },
-    {
-      contant1: "Blockchain",
-      contant2: "900.348.15 PAW Staked",
-      contant3: "Commission",
-      contant4: "10%",
-      contant5: "Checkpoints Signed",
-      contant6: "100%",
-      contant7: "Health Status",
-      contant8: "Healthy",
-    },
-    {
-      contant1: "Blockchain",
-      contant2: "900.348.15 PAW Staked",
-      contant3: "Commission",
-      contant4: "10%",
-      contant5: "Checkpoints Signed",
-      contant6: "100%",
-      contant7: "Health Status",
-      contant8: "Healthy",
-    },
-    {
-      contant1: "Blockchain",
-      contant2: "900.348.15 PAW Staked",
-      contant3: "Commission",
-      contant4: "10%",
-      contant5: "Checkpoints Signed",
-      contant6: "100%",
-      contant7: "Health Status",
-      contant8: "Healthy",
-    },
-    {
-      contant1: "Blockchain",
-      contant2: "900.348.15 PAW Staked",
-      contant3: "Commission",
-      contant4: "10%",
-      contant5: "Checkpoints Signed",
-      contant6: "100%",
-      contant7: "Health Status",
-      contant8: "Healthy",
-    },
-    {
-      contant1: "Blockchain",
-      contant2: "900.348.15 PAW Staked",
-      contant3: "Commission",
-      contant4: "10%",
-      contant5: "Checkpoints Signed",
-      contant6: "100%",
-      contant7: "Health Status",
-      contant8: "Healthy",
-    },
-    {
-      contant1: "Blockchain",
-      contant2: "900.348.15 PAW Staked",
-      contant3: "Commission",
-      contant4: "10%",
-      contant5: "Checkpoints Signed",
-      contant6: "100%",
-      contant7: "Health Status",
-      contant8: "Healthy",
-    },
-    {
-      contant1: "Blockchain",
-      contant2: "900.348.15 PAW Staked",
-      contant3: "Commission",
-      contant4: "10%",
-      contant5: "Checkpoints Signed",
-      contant6: "100%",
-      contant7: "Health Status",
-      contant8: "Healthy",
-    },
-  ];
+  const [columnView, setColumnView] = useState(false);
+  const handleClickGrid = () => {
+    setColumnView(false);
+  };
+  const handleClickColumn = () => {
+    setColumnView(true);
+  };
 
   return (
     <div>
@@ -148,10 +35,24 @@ const AllValidators = () => {
           <div>
             <SearchField />
           </div>
-          <div className="flex max-sm:gap-1 gap-5">
+          <div className="flex max-sm:gap-1 gap-1">
             <Dropdown DropdownText={"Performance"} DropdownImg={command} />
-            <img src={grid} alt="grid" className="max-sm:w-8 special:w-16 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer"/>
-            <img src={column} alt="column" className="max-sm:w-8 special:w-16 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer" />
+            <img
+              src={grid}
+              alt="grid"
+              className={`${
+                columnView ? "bg-transparent" : "bg-[#064986]"
+              } max-sm:w-8 special:w-16 cursor-pointer px-2 max-sm:px-1 rounded-xl`}
+              onClick={handleClickGrid}
+            />
+            <img
+              src={column}
+              alt="column"
+              className={`${
+                columnView ? "bg-[#064986]" : "bg-transparent"
+              } max-sm:w-8 special:w-16 cursor-pointer px-2 max-sm:px-1 rounded-xl`}
+              onClick={handleClickColumn}
+            />
           </div>
         </div>
         <div className="flex justify-between items-center rounded-xl ring-1 ring-white px-3 py-1">
@@ -171,22 +72,38 @@ const AllValidators = () => {
           <div className="text-gray-500 special:text-xl"><h1>99.47%</h1></div>
           <div><img src={arrow} alt="arrow" className="special:w-16"/></div>
         </div>
-        <div className="grid grid-cols-4 gap-4 max-xl:grid-cols-3 max-sm:grid-cols-1 special:grid-cols-6 rounded-3xl">
-        {cardData.map((card, index) => (
-          <Card
-            key={index}
-            contant1={card.contant1}
-            contant2={card.contant2}
-            contant3={card.contant3}
-            contant4={card.contant4}
-            contant5={card.contant5}
-            contant6={card.contant6}
-            contant7={card.contant7}
-            contant8={card.contant8}
-            onDelegateClick={handleDelegateClick}
-          />
-        ))}
-        </div>
+        {columnView ? (
+          <div className="max-sm:hidden">
+            <OverviewTable TABLE_HEAD={CardTABLE_HEAD} TABLE_ROWS={CardData} onDelegateClick={handleDelegateClick}/>
+          </div>
+        ) : (
+          <div className="grid grid-cols-4 gap-4 max-xl:grid-cols-3 max-sm:grid-cols-1 special:grid-cols-6">
+            {CardData.map((card, index) => (
+              <Card
+                key={index}
+                Blockchain={card.Blockchain}
+                Stake={card.Stake}
+                Commission={card.Commission}
+                Checkpoints={card.Checkpoints}
+                Health={card.Health}
+                onDelegateClick={handleDelegateClick}
+              />
+            ))}
+          </div>
+        )}
+          <div className="grid grid-cols-4 gap-4 max-xl:grid-cols-3 max-sm:grid-cols-1 special:grid-cols-6 sm:hidden">
+            {CardData.map((card, index) => (
+              <Card
+                key={index}
+                Blockchain={card.Blockchain}
+                Stake={card.Stake}
+                Commission={card.Commission}
+                Checkpoints={card.Checkpoints}
+                Health={card.Health}
+                onDelegateClick={handleDelegateClick}
+              />
+            ))}
+          </div>
         <div className="flex justify-center"><PaginationNav1Presentation/></div>
       </div>
       <Footer />

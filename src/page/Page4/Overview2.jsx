@@ -9,11 +9,12 @@ import Infocard from "../../components/Infocard/Infocard";
 import Overview3table from "../../components/Overview3table/Overview3table";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
+import {OverviewdataArray, OverviewTABLE_HEAD, OverviewTABLE_ROWS} from '../../components/Details/Details'
 
 const Overview2 = () => {
   const navigate = useNavigate();
   const handleBecomeDelegateClick = () => {
-    navigate("/Overview");
+    navigate("/AllValidators");
   };
   const [checkpoint, setCheckpoint] = useState(false);
   const handleClickDelegators = () => {
@@ -33,87 +34,7 @@ const Overview2 = () => {
       icon: "👌",
     });
   };
-  const dataArray = [
-    {
-      contant1: "0x6c103325f99cd7a4f6b2b4261c7327c7282cdde5",
-      contant2: "87,995 PAW",
-    },
-    {
-      contant1: "0x6c103325f99cd7a4f6b2b4261c7327c7282cdde5",
-      contant2: "87,995 PAW",
-    },
-    {
-      contant1: "0x6c103325f99cd7a4f6b2b4261c7327c7282cdde5",
-      contant2: "87,995 PAW",
-    },
-    {
-      contant1: "0x6c103325f99cd7a4f6b2b4261c7327c7282cdde5",
-      contant2: "87,995 PAW",
-    },
-    {
-      contant1: "0x6c103325f99cd7a4f6b2b4261c7327c7282cdde5",
-      contant2: "87,995 PAW",
-    },
-    {
-      contant1: "0x6c103325f99cd7a4f6b2b4261c7327c7282cdde5",
-      contant2: "87,995 PAW",
-    },
-    {
-      contant1: "0x6c103325f99cd7a4f6b2b4261c7327c7282cdde5",
-      contant2: "87,995 PAW",
-    },
-    {
-      contant1: "0x6c103325f99cd7a4f6b2b4261c7327c7282cdde5",
-      contant2: "87,995 PAW",
-    },
-    {
-      contant1: "0x6c103325f99cd7a4f6b2b4261c7327c7282cdde5",
-      contant2: "87,995 PAW",
-    },
-  ];
-  const TABLE_HEAD = ["Latest Checkpoints Signed", "Rewards", "Timestamp"];
-  const TABLE_ROWS = [
-    {
-      contant1: "#54,534",
-      contant2: "2.76 MATIC",
-      contant3: "12/4/2023, 2:31:59 PM",
-    },
-    {
-      contant1: "#54,534",
-      contant2: "2.76 MATIC",
-      contant3: "12/4/2023, 2:31:59 PM",
-    },
-    {
-      contant1: "#54,534",
-      contant2: "2.76 MATIC",
-      contant3: "12/4/2023, 2:31:59 PM",
-    },
-    {
-      contant1: "#54,534",
-      contant2: "2.76 MATIC",
-      contant3: "12/4/2023, 2:31:59 PM",
-    },
-    {
-      contant1: "#54,534",
-      contant2: "2.76 MATIC",
-      contant3: "12/4/2023, 2:31:59 PM",
-    },
-    {
-      contant1: "#54,534",
-      contant2: "2.76 MATIC",
-      contant3: "12/4/2023, 2:31:59 PM",
-    },
-    {
-      contant1: "#54,534",
-      contant2: "2.76 MATIC",
-      contant3: "12/4/2023, 2:31:59 PM",
-    },
-    {
-      contant1: "#54,534",
-      contant2: "2.76 MATIC",
-      contant3: "12/4/2023, 2:31:59 PM",
-    },
-  ];
+  
   return (
     <div>
       <Toaster position="top-left" reverseOrder={false} />
@@ -126,7 +47,7 @@ const Overview2 = () => {
             <img
               src={copy}
               alt="copy"
-              className="w-5 special:w-10 cursor-pointer transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300"
+              className="w-5 special:w-10 cursor-pointer"
               onClick={() =>
                 copyToClipboard(
                   document.getElementById("ownerAddress").innerText
@@ -140,7 +61,7 @@ const Overview2 = () => {
             <img
               src={copy}
               alt="copy"
-              className="w-5 special:w-10 cursor-pointer transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300"
+              className="w-5 special:w-10 cursor-pointer"
               onClick={() =>
                 copyToClipboard(
                   document.getElementById("ownerAddress1").innerText
@@ -273,7 +194,7 @@ const Overview2 = () => {
             <button
               className={`${
                 checkpoint ? "bg-transparent" : "bg-[#064986]"
-              } rounded-lg text-sm text-white px-3 py-2 special:text-2xl md:whitespace-nowrap transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300`}
+              } rounded-lg text-sm text-white px-3 py-2 special:text-2xl md:whitespace-nowrap hover:bg-white hover:text-[#064986]`}
               onClick={handleClickDelegators}
             >
               Delegators
@@ -281,7 +202,7 @@ const Overview2 = () => {
             <button
               className={`${
                 checkpoint ? "bg-[#064986]" : "bg-transparent"
-              } rounded-lg text-sm text-white px-3 py-2 special:text-2xl md:whitespace-nowrap transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300`}
+              } rounded-lg text-sm text-white px-3 py-2 special:text-2xl md:whitespace-nowrap hover:bg-white hover:text-[#064986]`}
               onClick={handleClickCheckpoints}
             >
               Checkpoints Signed
@@ -289,7 +210,7 @@ const Overview2 = () => {
           </div>
           <div className="flex max-sm:gap-1 gap-5">
             <button
-              className="bg-[#064986] rounded-lg text-sm text-white px-3 py-2 special:text-2xl md:whitespace-nowrap transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300"
+              className="bg-[#064986] rounded-lg text-sm text-white px-3 py-2 special:text-2xl md:whitespace-nowrap hover:bg-white hover:text-[#064986]"
               onClick={handleBecomeDelegateClick}
             >
               Become a Delegator
@@ -298,11 +219,11 @@ const Overview2 = () => {
         </div>
         {checkpoint ? (
           <div>
-            <Overview3table TABLE_HEAD={TABLE_HEAD} TABLE_ROWS={TABLE_ROWS} />
+            <Overview3table TABLE_HEAD={OverviewTABLE_HEAD} TABLE_ROWS={OverviewTABLE_ROWS} />
           </div>
         ) : (
           <div>
-            {dataArray.map((data) => (
+            {OverviewdataArray.map((data) => (
               <Overview2Card
                 contant1={data.contant1}
                 contant2={data.contant2}
@@ -310,11 +231,6 @@ const Overview2 = () => {
             ))}
           </div>
         )}
-        {/* <div>
-          {dataArray.map((data) => (
-            <Overview2Card contant1={data.contant1} contant2={data.contant2} />
-          ))}
-        </div> */}
         <div className="flex justify-center">
           <PaginationNav1Presentation />
         </div>

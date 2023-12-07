@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <h1 className="text-white max-sm:hidden">
+        <h1 className="pr-20 max-lg:pr-5 text-white max-sm:hidden">
           Copyright © 2023 PAW LLC All Rights Reserved
         </h1>
       </div>
