@@ -141,13 +141,13 @@ const Overview = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-between gap-2">
+        <div className="flex justify-between max-sm:justify-center gap-2 max-sm:gap-1">
           <div>
             <SearchField />
           </div>
           <div className="flex max-sm:gap-1 gap-5">
             <button
-              className="bg-[#064986] rounded-lg text-sm text-white px-3 special:text-2xl md:whitespace-nowrap hover:bg-white hover:text-[#064986]"
+              className="bg-[#064986] rounded-lg max-sm:text-[10px] text-sm text-white max-sm:px-1 px-3 special:text-2xl whitespace-nowrap hover:bg-white hover:text-[#064986]"
               onClick={handleBecomeDelegateClick}
             >
               Become a Delegator
@@ -157,7 +157,7 @@ const Overview = () => {
               alt="grid"
               className={`${
                 columnView ? "bg-transparent" : "bg-[#064986]"
-              } max-sm:w-8 special:w-16 cursor-pointer px-2 max-sm:px-1 rounded-xl`}
+              } max-sm:w-7 special:w-16 cursor-pointer px-2 max-sm:px-1 rounded-xl`}
               onClick={handleClickGrid}
             />
             <img
@@ -165,7 +165,7 @@ const Overview = () => {
               alt="column"
               className={`${
                 columnView ? "bg-[#064986]" : "bg-transparent"
-              } max-sm:w-8 special:w-16 cursor-pointer px-2 max-sm:px-1 rounded-xl`}
+              } max-sm:w-7 special:w-16 cursor-pointer px-2 max-sm:px-1 rounded-xl`}
               onClick={handleClickColumn}
             />
           </div>

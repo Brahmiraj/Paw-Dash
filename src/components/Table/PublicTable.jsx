@@ -15,7 +15,7 @@ const PublicTable = ({TABLE_HEAD, TABLE_ROWS}) => {
         <tbody>
           {TABLE_ROWS.map((details, key) => (
             <React.Fragment key={key}>
-              <tr className="text-gray-400">
+              <tr className="text-gray-400 hover:text-white">
                 <td className="p-2">{details.id}</td>
                 <td>{details.title}</td>
                 <td>{details.name}</td>
