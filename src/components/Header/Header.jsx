@@ -10,9 +10,9 @@ const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const Links = [
-    { name: "Overview", navigate: "/Overview" },
+    { name: "Overview", navigate: "/" },
     { name: "All Validators", navigate: "/AllValidators" },
-    { name: "Public Notices", navigate: "/" },
+    { name: "Public Notices", navigate: "/PublicNotice" },
   ];
 
   const handleLinkClick = (path, index) => {
