@@ -113,7 +113,7 @@ const Overview2 = () => {
   return (
     <div>
       <Header />
-      <div className="flex flex-col gap-5 px-40 py-10 max-lg:px-5 lg:px-20 special:text-3xl">
+      <div className="flex flex-col gap-5 px-40 py-10 max-lg:px-5 lg:px-20 special:text-3xl pt-24">
         <div className="grid grid-cols-4 max-sm:grid-cols-2 justify-between gap-3 max-xl:text-xs">
           <div className="text-white flex justify-between items-center rounded-lg ring-1 ring-white w-full max-xl:p-1 p-2 max-sm:p-1">
             <h1 className="font-bold">Owner</h1>

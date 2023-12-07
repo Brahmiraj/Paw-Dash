@@ -146,7 +146,7 @@ const Overview = () => {
   return (
     <div>
       <Header />
-      <div className="flex flex-col gap-5 px-40 py-10 max-lg:px-5 lg:px-20">
+      <div className="flex flex-col gap-5 px-40 py-10 max-lg:px-5 lg:px-20 pt-24">
         <div className="bg-[#00030CCC] rounded-2xl">
           <h1 className="text-white text-center special:text-4xl">Staking Overview</h1>
           <div className="px-10 py-5 max-xl:px-3 max-sm:hidden">
