@@ -2,15 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Inter&family=Poppins&display=swap');
 :root {
-  background-image: url('./assets/images/body/background-image.png');
+  background-image: url("./assets/images/body/background-image.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #00030C;
+  background-color: #00030c;
 }
 
 @media (max-width: 640px) {
   :root {
     background-size: auto;
   }
+}
+
+
+.Poppins {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }

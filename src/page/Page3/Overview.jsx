@@ -9,9 +9,140 @@ import icon from "../../assets/images/Icon-section/icon.png";
 import arrow from "../../assets/images/Icon-section/arrow.svg";
 import { PaginationNav1Presentation } from "../../components/Pagination/Pagination";
 import Infocard from '../../components/Infocard/Infocard'
+import { useNavigate } from "react-router-dom";
 
 
 const Overview = () => {
+  const navigate = useNavigate();
+  const handleDelegateClick = () => {
+    navigate('/Overview2');
+  };
+  const handleBecomeDelegateClick = () => {
+    navigate('/Overview');
+  };
+  const cardData = [
+    {
+      contant1: "Blockchain",
+      contant2: "900.348.15 PAW Staked",
+      contant3: "Commission",
+      contant4: "10%",
+      contant5: "Checkpoints Signed",
+      contant6: "100%",
+      contant7: "Health Status",
+      contant8: "Healthy",
+    },
+    {
+      contant1: "Blockchain",
+      contant2: "900.348.15 PAW Staked",
+      contant3: "Commission",
+      contant4: "10%",
+      contant5: "Checkpoints Signed",
+      contant6: "100%",
+      contant7: "Health Status",
+      contant8: "Healthy",
+    },
+    {
+      contant1: "Blockchain",
+      contant2: "900.348.15 PAW Staked",
+      contant3: "Commission",
+      contant4: "10%",
+      contant5: "Checkpoints Signed",
+      contant6: "100%",
+      contant7: "Health Status",
+      contant8: "Healthy",
+    },
+    {
+      contant1: "Blockchain",
+      contant2: "900.348.15 PAW Staked",
+      contant3: "Commission",
+      contant4: "10%",
+      contant5: "Checkpoints Signed",
+      contant6: "100%",
+      contant7: "Health Status",
+      contant8: "Healthy",
+    },
+    {
+      contant1: "Blockchain",
+      contant2: "900.348.15 PAW Staked",
+      contant3: "Commission",
+      contant4: "10%",
+      contant5: "Checkpoints Signed",
+      contant6: "100%",
+      contant7: "Health Status",
+      contant8: "Healthy",
+    },
+    {
+      contant1: "Blockchain",
+      contant2: "900.348.15 PAW Staked",
+      contant3: "Commission",
+      contant4: "10%",
+      contant5: "Checkpoints Signed",
+      contant6: "100%",
+      contant7: "Health Status",
+      contant8: "Healthy",
+    },
+    {
+      contant1: "Blockchain",
+      contant2: "900.348.15 PAW Staked",
+      contant3: "Commission",
+      contant4: "10%",
+      contant5: "Checkpoints Signed",
+      contant6: "100%",
+      contant7: "Health Status",
+      contant8: "Healthy",
+    },
+    {
+      contant1: "Blockchain",
+      contant2: "900.348.15 PAW Staked",
+      contant3: "Commission",
+      contant4: "10%",
+      contant5: "Checkpoints Signed",
+      contant6: "100%",
+      contant7: "Health Status",
+      contant8: "Healthy",
+    },
+    {
+      contant1: "Blockchain",
+      contant2: "900.348.15 PAW Staked",
+      contant3: "Commission",
+      contant4: "10%",
+      contant5: "Checkpoints Signed",
+      contant6: "100%",
+      contant7: "Health Status",
+      contant8: "Healthy",
+    },
+    {
+      contant1: "Blockchain",
+      contant2: "900.348.15 PAW Staked",
+      contant3: "Commission",
+      contant4: "10%",
+      contant5: "Checkpoints Signed",
+      contant6: "100%",
+      contant7: "Health Status",
+      contant8: "Healthy",
+    },
+    {
+      contant1: "Blockchain",
+      contant2: "900.348.15 PAW Staked",
+      contant3: "Commission",
+      contant4: "10%",
+      contant5: "Checkpoints Signed",
+      contant6: "100%",
+      contant7: "Health Status",
+      contant8: "Healthy",
+    },
+    {
+      contant1: "Blockchain",
+      contant2: "900.348.15 PAW Staked",
+      contant3: "Commission",
+      contant4: "10%",
+      contant5: "Checkpoints Signed",
+      contant6: "100%",
+      contant7: "Health Status",
+      contant8: "Healthy",
+    },
+  ];
+
   return (
     <div>
       <Header />
@@ -128,7 +259,7 @@ const Overview = () => {
             <SearchField />
           </div>
           <div className="flex max-sm:gap-1 gap-5">
-            <button className="bg-[#064986] rounded-lg text-sm text-white px-3 special:text-2xl md:whitespace-nowrap">
+            <button className="bg-[#064986] rounded-lg text-sm text-white px-3 special:text-2xl md:whitespace-nowrap transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300" onClick={handleBecomeDelegateClick}>
               Become a Delegator
             </button>
             <img src={grid} alt="grid" className="special:w-16"/>
@@ -153,18 +284,20 @@ const Overview = () => {
           <div><img src={arrow} alt="arrow" className="special:w-16"/></div>
         </div>
         <div className="grid grid-cols-4 gap-4 max-xl:grid-cols-3 max-sm:grid-cols-1 special:grid-cols-6">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+        {cardData.map((card, index) => (
+          <Card
+            key={index}
+            contant1={card.contant1}
+            contant2={card.contant2}
+            contant3={card.contant3}
+            contant4={card.contant4}
+            contant5={card.contant5}
+            contant6={card.contant6}
+            contant7={card.contant7}
+            contant8={card.contant8}
+            onDelegateClick={handleDelegateClick}
+          />
+        ))}
         </div>
         <div className="flex justify-center"><PaginationNav1Presentation/></div>
       </div>

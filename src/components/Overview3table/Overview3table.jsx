@@ -15,7 +15,7 @@ const Overview3table = ({TABLE_HEAD, TABLE_ROWS}) => {
         <tbody>
           {TABLE_ROWS.map((details, key) => (
             <React.Fragment key={key}>
-              <tr className="text-gray-400">
+              <tr className="text-gray-400 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300">
                 <td>{details.contant1}</td>
                 <td>{details.contant2}</td>
                 <td>{details.contant3}</td>
