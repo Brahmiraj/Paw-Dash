@@ -5,11 +5,6 @@ const PublicTable = ({TABLE_ROWS}) => {
       <table className="table-fixed w-full text-left gap-3 max-sm:text-[10px] max-sm:table-auto special:text-3xl">
         <thead>
           <tr className="text-white">
-            {/* {TABLE_HEAD.map((details, key) => (
-              <th scope="col" key={key}>
-                {details}
-              </th>
-            ))} */}
             <th className="w-32 max-lg:w-20 max-sm:w-10">#ID</th>
             <th className="text-left">Title</th>
             <th className="text-start pl-[10%] max-xl:pl-[5%]">Validator Name</th>
@@ -26,10 +21,10 @@ const PublicTable = ({TABLE_ROWS}) => {
                 <td className="text-start pl-[17%] max-xl:pl-[7%]">{details.time}</td>
               </tr>
               <tr>
-                {/* <td colSpan={TABLE_HEAD.length}>
-                  <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700" />
-                </td> */}
-              </tr>
+              <td colSpan="4">
+                <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700" />
+              </td>
+            </tr>
             </React.Fragment>
           ))}
         </tbody>
