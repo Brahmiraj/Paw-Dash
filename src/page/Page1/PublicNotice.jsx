@@ -6,7 +6,7 @@ import Dropdown from "../../components/Dropdown/Dropdown";
 import DropdownImg from "../../assets/images/Dropdown/Dropdown.png";
 import { PaginationNav1Presentation } from "../../components/Pagination/Pagination";
 import PublicTable from "../../components/Table/PublicTable";
-import {PublicNoticeTABLE_HEAD, PublicNoticeTABLE_ROWS} from '../../components/Details/Details'
+import {PublicNoticeTABLE_ROWS} from '../../components/Details/Details'
 
 const PublicNotice = () => {
   return (
@@ -18,7 +18,7 @@ const PublicNotice = () => {
         <Dropdown DropdownText={"All Notices"} DropdownImg={DropdownImg} />
       </div>
       <div className="py-3 pt-10">
-        <PublicTable TABLE_HEAD={PublicNoticeTABLE_HEAD} TABLE_ROWS={PublicNoticeTABLE_ROWS} />
+        <PublicTable TABLE_ROWS={PublicNoticeTABLE_ROWS} />
       </div>
       <div className="flex justify-center">
         <PaginationNav1Presentation />

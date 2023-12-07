@@ -35,7 +35,7 @@ const AllValidators = () => {
           <div>
             <SearchField />
           </div>
-          <div className="flex max-sm:gap-1 gap-1">
+          <div className="flex max-sm:gap-0 gap-1">
             <Dropdown DropdownText={"Performance"} DropdownImg={command} />
             <img
               src={grid}

@@ -39,7 +39,7 @@ const Overview2 = () => {
     <div>
       <Toaster position="top-left" reverseOrder={false} />
       <Header />
-      <div className="flex flex-col gap-5 px-40 py-10 max-lg:px-5 lg:px-20 special:text-3xl pt-24">
+      <div className="flex flex-col gap-5 px-40 py-10 max-sm:px-5 max-lg:px-10 lg:px-20 special:text-3xl pt-24">
         <div className="grid grid-cols-4 max-sm:grid-cols-2 justify-between gap-3 max-xl:text-xs">
           <div className="text-white flex justify-between items-center rounded-lg ring-1 ring-white w-full max-xl:p-1 p-2 max-sm:p-1">
             <h1 className="font-bold">Owner</h1>
@@ -189,12 +189,12 @@ const Overview2 = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-between">
-          <div className="flex max-sm:text-xs">
+        <div className="flex justify-between max-sm:justify-between">
+          <div className="flex ">
             <button
               className={`${
                 checkpoint ? "bg-transparent" : "bg-[#064986]"
-              } rounded-lg text-sm text-white px-3 py-2 special:text-2xl md:whitespace-nowrap hover:bg-white hover:text-[#064986]`}
+              } rounded-lg  text-sm max-sm:text-xs text-white px-3 py-2 special:text-2xl md:whitespace-nowrap hover:bg-white hover:text-[#064986]`}
               onClick={handleClickDelegators}
             >
               Delegators
@@ -202,7 +202,7 @@ const Overview2 = () => {
             <button
               className={`${
                 checkpoint ? "bg-[#064986]" : "bg-transparent"
-              } rounded-lg text-sm text-white px-3 py-2 special:text-2xl md:whitespace-nowrap hover:bg-white hover:text-[#064986]`}
+              } rounded-lg text-sm max-sm:text-xs text-white px-3 py-2 special:text-2xl md:whitespace-nowrap hover:bg-white hover:text-[#064986]`}
               onClick={handleClickCheckpoints}
             >
               Checkpoints Signed
@@ -210,7 +210,7 @@ const Overview2 = () => {
           </div>
           <div className="flex max-sm:gap-1 gap-5">
             <button
-              className="bg-[#064986] rounded-lg text-sm text-white px-3 py-2 special:text-2xl md:whitespace-nowrap hover:bg-white hover:text-[#064986]"
+              className="bg-[#064986] rounded-lg text-sm max-sm:text-xs text-white px-3 py-2 special:text-2xl md:whitespace-nowrap hover:bg-white hover:text-[#064986]"
               onClick={handleBecomeDelegateClick}
             >
               Become a Delegator
